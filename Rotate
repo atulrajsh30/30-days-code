@@ -1,0 +1,34 @@
+import java.util.*;
+
+class inverse 
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner (System.in);
+        int n= sc.nextInt();
+        int k= sc.nextInt();
+        int s=0;int c=0; int d=n;
+        while(d!=0)
+        {
+            int r=d%10;
+            c++;
+            d=d/10;
+        }
+        int div=1; int mult=1;
+        for(int i=1; i<=c; i++)
+        {
+            if(i<=k)
+            {
+               div=div*10; 
+            }
+            else
+            {
+                mult=mult*10;
+            }
+        }
+        int r= n%div;
+        int q= n/div;
+        s=s+r*mult+q;
+        System.out.println(s);
+    }
+}
